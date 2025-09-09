@@ -22,7 +22,63 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-bg_dim">
+    <div class="flex flex-column">
+      <nav class="z-50 w-lg h-screen bg-bg0 px-5 py-5">
+        <div class="flex flex-column">
+          <p class="text-orange font-fira italic font-bold text-2xl">~/RaketKedde/blog</p>
+        </div>
+        <!-- Blog posts -->
+        <div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-8">
+            <span class="nerd-icon text-aqua sscale-125"> </span>
+            <p class="text-aqua font-fira text-2xl">posts</p>
+          </div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-16">
+            <span class="nerd-icon text-red scale-125"></span>
+            <p class="text-aqua font-fira text-2xl">Hello world!</p>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-8">
+            <span class="nerd-icon text-aqua scale-125"> </span>
+            <p class="text-aqua font-fira text-2xl">projects</p>
+          </div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-16">
+            <span class="nerd-icon text-red scale-125"></span>
+            <p class="text-aqua font-fira text-2xl">This blog!</p>
+          </div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-16">
+            <span class="nerd-icon text-blue scale-125"></span>
+            <p class="text-aqua font-fira text-2xl">Public project</p>
+          </div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-16">
+            <span class="nerd-icon text-purple scale-125"></span>
+            <p class="text-aqua font-fira text-2xl">Another project</p>
+          </div>
+        </div>
+        
+        <!-- Socials -->
+        <div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-8">
+            <span class="nerd-icon text-aqua sscale-125"> </span>
+            <p class="text-aqua font-fira text-2xl">Socials</p>
+          </div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-16">
+            <span class="nerd-icon text-fg scale-125"></span>
+            <p class="text-aqua font-fira text-2xl">GitHub</p>
+          </div>
+          <div class="flex flex-column justify-start items-center gap-2 pl-16">
+            <span class="nerd-icon text-blue scale-125"></span>
+            <p class="text-aqua font-fira text-2xl">LinkedIn</p>
+          </div>
+        </div>
+      </nav>
+      <main class="container mx-auto mt-28 px-5">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

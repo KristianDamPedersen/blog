@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* 
+   * Everforest color palette source:
+   * https://github.com/sainnhe/everforest?tab=readme-ov-file
+   * https://private-user-images.githubusercontent.com/3299086/473768514-3dc42611-e6f3-40df-b72e-8ce5b4c0d3b0.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTc0MDAzMzAsIm5iZiI6MTc1NzQwMDAzMCwicGF0aCI6Ii8zMjk5MDg2LzQ3Mzc2ODUxNC0zZGM0MjYxMS1lNmYzLTQwZGYtYjcyZS04Y2U1YjRjMGQzYjAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDkwOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA5MDlUMDY0MDMwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODNmMzU3OGMwOTI2ZjQxMGFkZmFhYTI0N2VjZGZiNDA4YzI3ODMyMTFkNDg4YjJlOTBkZjMxNDRjYTQ4ZDM4OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.Mf5uiwULUHNHvwXzCyfEoNkuMU0GmGaOBRtGj1ICfeU
+   */
+  --color-bg_dim: #232A2E;
+  --color-bg0: #2D353B;
+  --color-bg1: #343F44;
+  --color-bg2: #3D484D;
+  --color-bg3: #475258;
+  --color-bg4: #4F585E;
+  --color-bg5: #56635F;
+  --color-bg_red: #514045;
+  --color-bg_yellow: #4D4C43;
+  --color-bg_green: #425047;
+  --color-bg_blue: #3A515D;
+  --color-bg_purple: #4A444E;
+  --color-bg_visual: #543A48;
+  --color-fg: #D3C6AA;
+  --color-red: #E67E80;
+  --color-yellow: #DBBC7F;
+  --color-green: #A7C080;
+  --color-blue: #7FBBB3;
+  --color-purple: #D669B6;
+  --color-aqua: #83C092;
+  --color-orange: #E69875;
+  --color-grey0: #7A8478;
+  --color-grey1: #859289;
+  --color-grey2: #9DA9A0;
+  --color-statusline1: #A7C090;
+  --color-statusline2: #D3C6AA;
+  --color-statusline3: #E67E80;
+
+  /*
+   * Fira code font
+   */
+  --font-fira: "Fira Code", monospace;
+
+}
+
