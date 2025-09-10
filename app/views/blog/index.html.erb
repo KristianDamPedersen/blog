@@ -1,1 +1,23 @@
-<%= @articles %>
+<div>
+  <h1 class="text-orange text-3xl font-fira bold">Posts</h1>
+
+  <% @articles.each do |article| %>
+    <hr class="h-px my-8 bg-red border-0">
+    <div class="bg-bg0 hover:bg-bg4 p-4">
+      <a href="<%= article["url"] %>">
+        <div class="flex flex-row items-center justify-between">
+          <div class="flex flex-row items-center">
+            <span class="nerd-icon <%= article["icon-color"] %> scale-125"><%= article["icon"] %></span>
+            <h1 class="text-aqua font-fire text-2xl bold"><%= article["title"] %></h1>  
+          </div>
+          <div>
+            <p class="text-orange font-fira"><%= article["date"] %></p>
+          </div>
+        </div>
+        <p class="text-fg italic text-xl px-4">
+          <%= article["description"] %>
+        </p>
+      </a>
+    </div>
+  <% end %>
+</div>

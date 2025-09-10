@@ -5,7 +5,7 @@ module Converters
     TEMPLATE_CONTENT= <<-HTML
     <div>
       ${content}
-      <h1>Test</h1>
+      <h1 class="text-fg">Test</h1>
     </div>
     HTML
 
