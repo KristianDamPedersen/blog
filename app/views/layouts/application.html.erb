@@ -36,10 +36,14 @@
             <p class="text-aqua font-fira text-2xl">posts</p>
           </div>
           <div data-collapsible-target="content">
-            <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
-              <span class="nerd-icon text-red scale-125"></span>
-              <p class="text-aqua font-fira text-2xl">Hello world!</p>
-            </div>
+            <% @articles.each do |article| %>
+              <a href="<%= article["url"] %>">
+                <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+                  <span class="nerd-icon <%= article["icon-color"] %> scale-125"><%= article["icon"] %></span>
+                  <p class="text-aqua font-fira text-2xl"><%= article["title"] %></p>
+                </div>
+              </a>
+            <% end %>
           </div>
         </div>
 
