@@ -22,7 +22,88 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-bg_dim">
+    <div class="flex flex-column">
+      <nav id="navbar" data-turbo-permanent class="z-50 w-lg h-screen bg-bg0 px-5 py-5">
+        <div class="flex flex-column">
+          <p class="text-orange font-fira italic font-bold text-xl">~/RaketKedde/blog</p>
+        </div>
+
+        <!-- Blog posts -->
+        <div data-controller="collapsible">
+          <div data-action="click->collapsible#toggle" class="flex flex-column justify-start items-center gap-2 pl-8 hover:bg-bg4 hover:cursor-pointer">
+            <span data-collapsible-target="icon" class="nerd-icon text-aqua"> </span>
+            <p class="text-aqua font-fira text-xl">posts</p>
+          </div>
+          <div data-collapsible-target="content">
+            <% @articles.each do |article| %>
+              <a href="<%= article["url"] %>">
+                <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+                  <span class="nerd-icon <%= article["icon-color"] %>"><%= article["icon"] %></span>
+                  <p class="text-aqua font-fira text-xl"><%= article["title"] %></p>
+                </div>
+              </a>
+            <% end %>
+            <a href="/blog">
+              <div class="flex flex-column items-center gap-2 pl-16">
+                <span class="nerd-icon text-aqua">󰍻</span>
+                <p class="text-aqua font-fira text-xl">See all..</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div data-controller="collapsible">
+          <div data-action="click->collapsible#toggle" class="flex flex-column justify-start items-center gap-2 pl-8 hover:bg-bg4 hover:cursor-pointer">
+            <span data-collapsible-target="icon" class="nerd-icon text-aqua"> </span>
+            <p class="text-aqua font-fira text-xl">projects</p>
+          </div>
+          <div data-collapsible-target="content">
+            <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+              <span class="nerd-icon text-red"></span>
+              <p class="text-aqua font-fira text-xl">This blog!</p>
+            </div>
+            <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+              <span class="nerd-icon text-blue"></span>
+              <p class="text-aqua font-fira text-xl">Public project</p>
+            </div>
+            <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+              <span class="nerd-icon text-purple"></span>
+              <p class="text-aqua font-fira text-xl">Another project</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Socials -->
+        <div data-controller="collapsible">
+          <div data-action="click->collapsible#toggle" class="flex flex-column justify-start items-center gap-2 pl-8 hover:bg-bg4 hover:cursor-pointer">
+            <span data-collapsible-target="icon" class="nerd-icon text-aqua"> </span>
+            <p class="text-aqua font-fira text-xl">socials</p>
+          </div>
+
+          <!-- GitHub -->
+          <div data-collapsible-target="content">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/KristianDamPedersen">
+              <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+                <span class="nerd-icon text-fg"></span>
+                <p class="text-aqua font-fira text-xl">GitHub</p>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/kristian-pedersen-bb07b3243">
+              <div class="flex flex-column justify-start items-center gap-2 pl-16 hover:bg-bg4">
+                <span class="nerd-icon text-blue"></span>
+                <p class="text-aqua font-fira text-xl">LinkedIn</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main class="container mx-auto mt-28 px-5">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

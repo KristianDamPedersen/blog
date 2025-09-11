@@ -61,3 +61,12 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Tailwindcss for Rails
+gem "tailwindcss-rails", "~> 4.3"
+
+# Redcarpet, used for parsing markdown to HTML for the blog.
+gem "redcarpet"
+
+# Front matter parser: Parses markdown metadata
+gem "front_matter_parser"

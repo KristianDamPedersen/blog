@@ -1,0 +1,24 @@
+/*
+ *# [Nerd Fonts]  Website: https://www.nerdfonts.com
+ *# [Nerd Fonts]  Development Website: https://github.com/ryanoasis/nerd-fonts
+ *# [Nerd Fonts]  Version: 3.4.0
+ *# [Nerd Fonts]  The following is generated from the build script
+ */
+@font-face {
+  font-family: 'Nerd Font';
+  src: url("../fonts/SymbolsNFM.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nerd-icon {
+  font-family: "Nerd Font", monospace;
+  font-size: 1.875rem; /* same as text-3xl */
+  line-height: 1;      /* removes vertical padding */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;        /* enforce equal box width */
+  height: 1.5em;       /* enforce equal box height */
+}
+
