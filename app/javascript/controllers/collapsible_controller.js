@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["content", "icon"]
 
-  connect() {
+  initialize() {
     this.openIcon = ""
     this.closedIcon = ""
 
@@ -12,7 +12,7 @@ export default class extends Controller {
 
   toggle() {
     this.contentTarget.classList.toggle("hidden")
-
+    
     if (this.contentTarget.classList.contains("hidden")) {
       this.iconTarget.textContent = this.closedIcon
     } else {
