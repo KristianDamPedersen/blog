@@ -4,7 +4,13 @@ class BlogController < ApplicationController
   end
 
   def article
-    render params[:any].to_sym
+    slug = params[:any]
+    if BlogController.slugs.include?(slug)
+      safe_slug = BlogController.get_meta.select { |meta| File.basename(meta[:url]) == slug }[0][:url]
+      render "#{safe_slug}"
+    else
+      raise ActionController::RoutingError, "Not found"
+    end
   end
 
   ##
@@ -19,5 +25,9 @@ class BlogController < ApplicationController
         fm.merge!(url: "/blog/#{filename.delete_suffix(".md")}")
         fm.with_indifferent_access
       end
+  end
+
+  def self.slugs
+    get_meta.map { |meta| File.basename(meta[:url]) }
   end
 end
