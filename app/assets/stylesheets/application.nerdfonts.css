@@ -6,9 +6,7 @@
  */
 @font-face {
   font-family: 'Nerd Font';
-  src: url("../fonts/SymbolsNFM.woff2") format("woff2"),
-       url("../fonts/SymbolsNFM.woff") format("woff"),
-       url("../fonts/SymbolsNerdFontMono-Regular.ttf") format("truetype");
+  src: url("../fonts/SymbolsNFM.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
