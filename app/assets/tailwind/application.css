@@ -42,3 +42,10 @@
 
 }
 
+.markdown h1 {
+  @apply text-xl font-fira text-orange font-bold; 
+}
+
+.markdown p {
+  @apply text-fg;
+}
