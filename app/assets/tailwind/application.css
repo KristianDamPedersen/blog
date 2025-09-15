@@ -63,6 +63,9 @@
   @apply text-lg font-fira text-fg italic; 
 }
 
+.markdown p {
+  @apply text-fg font-fira;
+}
 /* Block qoutes */ 
 
 .markdown blockquote {
@@ -78,6 +81,10 @@
   @apply px-4 py-2 rounded-sm bg-bg1
 }
 
-.markdown p {
-  @apply text-fg;
+/* Images */ 
+.markdown img {
+  @apply aspect-square px-16 object-cover;
 }
+
+
+
