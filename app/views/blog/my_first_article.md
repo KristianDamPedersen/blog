@@ -18,7 +18,7 @@ Something something *italic* **bold**
 
 ### Heading 3
 
-### Heading 4
+#### Heading 4
 
 > Quote
 
@@ -26,10 +26,13 @@ Something something *italic* **bold**
 `def inline; end`
 
 ```ruby
-def code_block
-  logger.info "this is from markdown"
+module ActionView
+  module ModelNaming # :nodoc:
+    def convert_to_model(object)
+      object.respond_to(:to_model) ? object.to_model : object
+    end
+  end
 end
-
 ```
 
 [This is a link](https://www.google.com) 
