@@ -7,6 +7,13 @@
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <%# Enables syntax highlighting for code in blog posts %>
+    <% content_for :head do %>
+      <style>
+        <%= Rouge::Themes::Base16::Monokai.render %>
+      </style>
+    <% end %>
 
     <%= yield :head %>
 

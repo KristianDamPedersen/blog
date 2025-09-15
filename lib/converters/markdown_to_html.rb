@@ -11,12 +11,14 @@ module Converters
     # Converts markdown to html using the provided template?
     def call(template, source)
       markdown = Redcarpet::Markdown.new(
-        Redcarpet::Render::HTML,
-        fenced_code_blocks: true,
-        tables: true,
-        autolink: true,
-        highlight: true,
-        quote: true
+        HtmlRenderer,
+        {
+          fenced_code_blocks: true,
+          tables: true,
+          autolink: true,
+          highlight: true,
+          quote: true
+        }
       )
 
       # Remove front matter from markdown
