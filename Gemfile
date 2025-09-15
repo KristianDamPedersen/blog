@@ -70,3 +70,5 @@ gem "redcarpet"
 
 # Front matter parser: Parses markdown metadata
 gem "front_matter_parser"
+
+gem "rouge", "~> 4.6"
