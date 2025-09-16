@@ -4,7 +4,6 @@ module Converters
   class MarkdownToHtml
     TEMPLATE_CONTENT= <<-HTML
       %%CONTENT%%
-      <h1 class="text-fg">Test</h1>
     HTML
 
     ##
