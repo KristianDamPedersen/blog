@@ -29,9 +29,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-bg_dim">
-    <div class="flex flex-column">
-      <nav id="navbar" data-turbo-permanent class="z-50 w-lg h-screen bg-bg0 px-5 py-5">
+  <body class="bg-bg_dim h-screen overflow-hidden">
+    <div class="flex flex-column h-full">
+      <nav id="navbar" data-turbo-permanent class="z-50 w-lg h-screen bg-bg0 px-5 py-5 h-full">
         <div class="flex flex-column">
           <p class="text-orange font-fira italic font-bold text-xl">~/RaketKedde/blog</p>
         </div>
@@ -108,7 +108,7 @@
           </div>
         </div>
       </nav>
-      <main class="container mx-auto mt-28 px-5">
+      <main class="container mx-auto pt-20 px-5 overflow-y-auto">
         <%= yield %>
       </main>
     </div>
