@@ -7,7 +7,10 @@ class BlogController < ApplicationController
     slug = params[:any]
     if BlogController.slugs.include?(slug)
       safe_slug = BlogController.get_meta.select { |meta| File.basename(meta[:url]) == slug }[0][:url]
-      render "#{safe_slug}"
+      markdown_source = File.read("app/views#{safe_slug}.md")
+
+      @content = Converters::MarkdownToHtml.new.call(nil, markdown_source)
+      render "blog/show"
     else
       raise ActionController::RoutingError, "Not found"
     end
