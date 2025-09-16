@@ -83,7 +83,7 @@
 
 /* Images */ 
 .markdown img {
-  @apply aspect-square px-16 object-cover;
+  @apply block mx-auto h-auto max-w-xl rounded-lg shadow-xl dark:shadow-bg_dim;
 }
 
 
